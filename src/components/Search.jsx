@@ -1,6 +1,5 @@
 import React from 'react';
 import { browserHistory as history } from 'react-router';
-import { Repository } from './Repository.jsx';
 
 class Search extends React.Component {
     constructor(props) {
@@ -18,8 +17,7 @@ class Search extends React.Component {
                 <form onSubmit={this._handleSubmit}>
                     <input ref="userInput" className="search-page__input" type="text" />
                     <button className="search-page__button">Search</button>
-                </form>
-				<Repository name="aloknath1"></Repository>				
+                </form>				
             </div>
         );
     }
