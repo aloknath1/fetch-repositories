@@ -1,13 +1,11 @@
-import './index.css';
-
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-
 import App from './components/App';
 import Search from './components/Search';
 import User from './components/User';
 import Repos from './components/Repos';
+import './index.css';
+import { createRoot } from 'react-dom/client';
 
 const routes = (
     <Router history={browserHistory}>
@@ -18,5 +16,6 @@ const routes = (
         </Route>
     </Router>
 );
-
-ReactDOM.render(routes, document.getElementById('root'));
+const container  = document.getElementById('root');
+const root = createRoot(container);
+root.render(routes);
